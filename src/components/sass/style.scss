@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+
+*{
+    @include transition(all 200ms ease-in)
+}
+
+body{
+    font-size: 16px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.quiz-box{
+    @extend %positionCenter;
+    background: $primary-color;
+    width: 600px;
+    padding: 40px 20px;
+    text-align: center;
+    color: $white;
+    box-shadow: 0 10px 10px rgba(0,0,0,.2);
+}
+.options-list{
+    display: flex;
+    justify-content: space-between;    
+    margin-top: 20px;
+}
+
+.options-list li{
+    flex:1;
+    margin: 2px 5px;;
+    display: inline-block;
+    padding: 6px;
+    border:1px solid lighten($primary-color, 60%);
+    cursor: pointer;
+}
+
+.corr-sec{
+    display: flex;
+    justify-content: space-between;
+}
